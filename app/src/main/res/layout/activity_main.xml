@@ -1,0 +1,238 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mainlayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/gradient_list"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:id="@+id/Signin"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="8dp"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="0.5in" />
+
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:layout_gravity="center"
+            app:srcCompat="@drawable/output_onlinepngtools" />
+
+        <TextView
+
+            android:id="@+id/textView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Welcome to CHIT Chat !"
+            android:textAlignment="center"
+            android:textAllCaps="true"
+            android:textColor="@color/black"
+            android:textSize="19dp"
+            android:textStyle="italic" />
+
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Sign-up / Login"
+            android:textAlignment="center"
+            android:textSize="24dp"
+            android:textStyle="bold" />
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp">
+
+            <com.hbb20.CountryCodePicker
+
+
+                android:id="@+id/ccp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:ccpDialog_allowSearch="true"
+                app:ccpDialog_backgroundColor="@color/white"
+                app:ccpDialog_fastScroller_bubbleColor="@color/black"
+                app:ccpDialog_fastScroller_bubbleTextAppearance="@style/MaterialAlertDialog.Material3"
+                app:ccpDialog_fastScroller_handleColor="@color/black"
+                app:ccpDialog_initialScrollToSelection="true"
+                app:ccpDialog_keyboardAutoPopup="true"
+                app:ccpDialog_searchEditTextTint="@color/black"
+                app:ccpDialog_showCloseIcon="true"
+                app:ccpDialog_showFastScroller="false"
+                app:ccpDialog_showFlag="true"
+                app:ccpDialog_showPhoneCode="true"
+                app:ccpDialog_showTitle="false"
+                app:ccpDialog_textColor="@color/black"
+                app:ccp_arrowColor="@color/black"
+                app:ccp_arrowSize="20dp"
+                app:ccp_autoDetectCountry="true"
+                app:ccp_autoDetectLanguage="true"
+                app:ccp_autoFormatNumber="true"
+                app:ccp_clickable="true"
+                app:ccp_contentColor="@color/black"
+                app:ccp_countryAutoDetectionPref="SIM_ONLY"
+                app:ccp_countryPreference="TR"
+                app:ccp_defaultLanguage="TURKISH"
+                app:ccp_defaultNameCode="TR"
+                app:ccp_excludedCountries="NONE"
+                app:ccp_flagBorderColor="@color/white"
+                app:ccp_hintExampleNumber="true"
+                app:ccp_rememberLastSelection="true"
+                app:ccp_selectionMemoryTag="signupCCP"
+                app:ccp_showArrow="true"
+                app:ccp_showFlag="true"
+                app:ccp_showFullName="false"
+                app:ccp_showNameCode="false"
+                app:ccp_showPhoneCode="true"
+                app:ccp_textGravity="RIGHT"
+                app:ccp_textSize="20sp">
+
+            </com.hbb20.CountryCodePicker>
+
+            <EditText
+
+                android:id="@+id/editText_carrierNumber"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:editable="true"
+                android:hint="5** ** ** Only Phone Number"
+                android:inputType="phone"
+                android:singleLine="true"
+                tools:ignore="TouchTargetSizeCheck" />
+        </TableRow>
+
+        <Button
+            android:id="@+id/signinBtn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:text="SIGN-UP " />
+
+        <TextView
+            android:id="@+id/textView3"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:paddingTop="0.9in"
+            android:text="ChitChat© "
+            android:textAlignment="center"
+            android:textColor="@color/black"
+            android:textSize="18dp"
+            android:textStyle="italic" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/verificationLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="8dp"
+        android:orientation="vertical"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/Signin"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="0.5in" />
+
+        <ImageView
+            android:id="@+id/security"
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:layout_gravity="center"
+            app:srcCompat="@drawable/pngtreecyber_security_shield_5610122" />
+
+        <TextView
+
+            android:id="@+id/text3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Verify your number"
+            android:textAlignment="center"
+            android:textAllCaps="true"
+            android:textColor="@color/black"
+            android:textSize="19dp"
+            android:textStyle="italic" />
+
+        <TextView
+            android:id="@+id/text4"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Check your phone"
+            android:textAlignment="center"
+            android:textSize="18dp"
+            android:textStyle="bold" />
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp">
+
+            <EditText
+                android:id="@+id/verifytextbar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:editable="true"
+                android:hint="******"
+                android:inputType="phone"
+                android:singleLine="true"
+                tools:ignore="TouchTargetSizeCheck" />
+        </TableRow>
+
+        <TextView
+            android:id="@+id/resendCodeTv"
+            style="@style/TextAppearance.MaterialComponents.Caption"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="5dp"
+            android:text="@string/didn_t_get_otp_resend"
+            android:textAlignment="center"
+            android:textColor="#777777" />
+
+        <Button
+            android:id="@+id/SendVerificationBtn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+            android:text="Send " />
+
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="0.5in" />
+
+        <TextView
+            android:id="@+id/team"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="ChitChat© "
+            android:textAlignment="center"
+            android:textColor="@color/black"
+            android:textSize="18dp"
+            android:textStyle="italic" />
+
+    </LinearLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

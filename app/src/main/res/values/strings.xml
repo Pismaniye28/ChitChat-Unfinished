@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">ChitChat</string>
+    <string name="didn_t_get_otp_resend">didn\'t get otp RESEND</string>
+</resources>
